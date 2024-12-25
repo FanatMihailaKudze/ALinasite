@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #ffcccb;
+    --secondary-color: #f44336;
+    --hover-color: #d32f2f;
+    --background-color: #d4a5a4;
+    --light-color: #fff5f5;
+    --border-color: #faccc9;
+    --text-color: #555;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    font-family: "Great Vibes", serif;
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+    z-index: 2;
+}
+
+header button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: var(--hover-color);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 10px var(--shadow-color);
+}
+
+main .photo {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--background-color);
+    padding: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
